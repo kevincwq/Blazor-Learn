@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp.ClientHost.FullSt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp.ClientHost.FullStack.Shared", "BlazorApp.ClientHost.FullStack\Shared\BlazorApp.ClientHost.FullStack.Shared.csproj", "{4D40C1E6-51E5-4DB1-9DDB-0021794C3CBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorClassLibrary.Example", "RazorClassLibrary.Example\RazorClassLibrary.Example.csproj", "{BD930FD3-3E15-4645-ABFE-A6614DD2678C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorClassLibrary.Example", "RazorClassLibrary.Example\RazorClassLibrary.Example.csproj", "{BD930FD3-3E15-4645-ABFE-A6614DD2678C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

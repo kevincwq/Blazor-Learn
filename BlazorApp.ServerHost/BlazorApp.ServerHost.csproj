@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>63552615-f37f-42d7-bff3-4f5a892c2728</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RazorClassLibrary.Example\RazorClassLibrary.Example.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,50 @@
+﻿@page "/contactus"
+@using System.ComponentModel.DataAnnotations
+
+<h3>Contact Us</h3>
+
+<EditForm Model="FormModel" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <label>
+        Name: <InputText id="name" @bind-Value="FormModel.Name" />
+    </label>
+    <label>
+        Thoughts?: <InputText id="comments" @bind-Value="FormModel.Comments" />
+    </label>
+    <label>
+        Email?: <InputText id="email" @bind-Value="FormModel.Email" />
+    </label>
+    <label>
+        Phone?: <InputText id="phone" @bind-Value="FormModel.Phone" />
+    </label>
+    <input type="submit" value="Submit" />
+    <ValidationSummary />
+</EditForm>
+
+<p>Information submit: @InformationSubmit</p>
+
+@code {
+    protected ContactUsModel FormModel { get; set; } = new ContactUsModel();
+
+    private string InformationSubmit { get; set; }
+
+    Task HandleValidSubmit()
+    {
+        InformationSubmit = $"{FormModel.Name}, {FormModel.Comments}, {FormModel.Email}, {FormModel.Phone}";
+        return Task.CompletedTask;
+    }
+
+    protected class ContactUsModel
+    {
+        [Required]
+        public string Name { get; set; }
+        public string Comments { get; set; }
+        
+        [Required]
+        [Phone]
+        public string Phone { get; set; }
+
+        [EmailAddress]
+        public string Email { get; set; }
+    }
+}
